@@ -23,12 +23,19 @@
         <li class="bolded">List Item 3</li>
     </ul>
 
+    <p>
+        This is an <strong>awesome</strong> paragraph!
+    </p>
+
+    <a href="www.google,=.com">I am a link</a>
+    <img src="logo.png">
+
     <script>
         var highlight = document.getElementById("highlight");
         var bolded = document.getElementsByClassName("bolded");
         var query = document.querySelector("#highlight");
         var queryAll = document.querySelectorAll(".bolded");
-        var tag = document.getElementsByTagName("p");
+        var tag1 = document.getElementsByTagName("p");
 
         // change an element's style
         var item1 = document.getElementById("highlight");
@@ -45,9 +52,21 @@
         // ...// toggle takes booleans
         item2.classList.toggle("specific-class");
 
-        // changing the content of a tag
+        // changing the content of a tag ... it will override the contents completely!
+        var tag2 = document.querySelector("p");
+        tag2.textContent //prints out the content of the p tag "This is an awesome paragraph!"
+        tag2.textContent = "blah blah blah" //chenge the content of the p tag
+        tag2.innerHTML //prints out "This is an <strong>awesome</strong> paragraph!" with the <strong>
 
         // changing attributes(src, href, etc.)
+        var link = document.querySelector("a");
+        link.getAttribute("href", "www.dogs.com");
+        ///<a href="www.dogs.com">I am a link to dogs</a>
+
+        //to change the image
+        var img = document.querySelector("img");
+        img.setAttribute("src", "corgi.png");
+        ///<img src="corgi.png">
     </script>
 
 </body>
