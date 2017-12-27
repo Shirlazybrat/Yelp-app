@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<style>
+    .some-class {
+        color: orange;
+        border: 10px dotted paleturquoise;
+    }
+</style>
+
+<body>
+    <h1>Hello</h1>
+    <h1>Goodbye</h1>
+    <ul>
+        <li id="highlight">List Item 1</li>
+        <li class="bolded">List Item 2</li>
+        <li class="bolded">List Item 3</li>
+    </ul>
+
+    <p>
+        This is an <strong>awesome</strong> paragraph!
+    </p>
+
+    <a href="www.google,=.com">I am a link</a>
+    <img src="logo.png">
+
+    <script>
+        var h1 = document.querySelector("h1");
+        // this will listen for the click event on the H1 tag
+        h1.addEventListener("click", function() {
+            // alert("h1 was lcicked");
+            h1.style.background = orange;
+        })
+
+        document.querySelector("ul").addEventListener("click", function() {
+            console.log("you clicked the ul");
+        })
+
+        var lis = document.querySelectorAll("li");
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].addEventListener("click"),
+                function() {
+                    //this refers to the item that was clicked
+                    this.style.color = "pink";
+                }
+        }
+    </script>
+
+</body>
+
+</html>
