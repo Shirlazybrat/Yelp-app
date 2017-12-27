@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
+<style>
+    .some-class {
+        color: orange;
+        border: 10px dotted paleturquoise;
+    }
+</style>
+
 <body>
     <h1>Hello</h1>
     <h1>Goodbye</h1>
@@ -22,6 +29,25 @@
         var query = document.querySelector("#highlight");
         var queryAll = document.querySelectorAll(".bolded");
         var tag = document.getElementsByTagName("p");
+
+        // change an element's style
+        var item1 = document.getElementById("highlight");
+        item1.style.color = "blue";
+        item1.style.border = "10px solid red";
+        item1.style.fontSize = "70px";
+        item1.style.background = "yellow";
+        item1.style.marginTop = "200px";
+
+        // adding/removing classes ... refer to <style>
+        var item2 = document.getElementById("bolded");
+        item2.classList.add("some-class");
+        item2.classList.remove("another-class");
+        // ...// toggle takes booleans
+        item2.classList.toggle("specific-class");
+
+        // changing the content of a tag
+
+        // changing attributes(src, href, etc.)
     </script>
 
 </body>
