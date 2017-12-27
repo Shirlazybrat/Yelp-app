@@ -19,49 +19,47 @@
             <li>The Keyword <em>this</em></li>
         </ul>
 
+        <!-- code to run in the console -->
+        <script>
+            // a method is a FUNCTION as a PROPERTY in an OBJECT
+
+            var obj = {
+                    name: "Shirl",
+                    age: 32,
+                    isCool: true,
+                    friends: ["Ken", "Donna", "Tam"],
+                    add: function(x, y) {
+                        return x + y;
+                    }
+                }
+                // call the add method
+            console.log(obj.add(10, 15));
+
+            // the THIS
+            var comments = {};
+            comments.data = ["Good-bye", "LAME", "LOL"];
+
+            // a print function that will print the elements of a array
+            function print(arr) {
+                arr.array.forEach(function(element) {
+                    console.log(element);
+                });
+            }
+
+            // call the print function on the comments.data arrar (not just the comments object)
+            print(comments.data);
+
+            // using the THIS
+            comments.print = function() {
+                    this,
+                    data.forEach(function(el) {
+                        console.log(el);
+                    });
+                }
+                // THIS is reffering to the object that the method is defined in
+
+            comments.print();
+        </script>
 </body>
 
 </html>
-
-
-<!-- code to run in the console -->
-<script>
-    // a method is a FUNCTION as a PROPERTY in an OBJECT
-
-    var obj = {
-            name: "Shirl",
-            age: 32,
-            isCool: true,
-            friends: ["Ken", "Donna", "Tam"],
-            add: function(x, y) {
-                return x + y;
-            }
-        }
-        // call the add method
-    console.log(obj.add(10, 15));
-
-    // the THIS
-    var comments = {};
-    comments.data = ["Good-bye", "LAME", "LOL"];
-
-    // a print function that will print the elements of a array
-    function print(arr) {
-        arr.array.forEach(function(element) {
-            console.log(element);
-        });
-    }
-
-    // call the print function on the comments.data arrar (not just the comments object)
-    print(comments.data);
-
-    // using the THIS
-    comments.print = function() {
-            this,
-            data.forEach(function(el) {
-                console.log(el);
-            });
-        }
-        // THIS is reffering to the object that the method is defined in
-
-    comments.print();
-</script>
