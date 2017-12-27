@@ -40,4 +40,22 @@ movie.forEach(function(movies) {
     console.log(result);
 })
 
+// refactor the code
+function buildString(movies) {
+    var result = "You have ";
+    if (movies.hasWatched) {
+        result += "watched ";
+    } else {
+        result += "not seen ";
+    }
+    result += movies.title + " - ";
+    result += movies.rating + " stars";
+    return result;
+}
+
+movie.forEach(function(movies) {
+    console.log(buildString(movies));
+})
+
+
 // challenge2: write code using es6
