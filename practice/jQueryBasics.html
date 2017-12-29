@@ -11,6 +11,7 @@
 
 <body>
     <h1>jQuery Demo</h1>
+    <h2>Exercise 1</h2>
 
     <ul>
         <li>Panda</li>
@@ -23,7 +24,21 @@
     <div id="third">Div 3</div>
     <div class="highlight">Div 4</div>
 
+    <br>
+    <h2>Exercise 2</h2>
+    <h1>jQuery Methods Demo Page</h1>
+
+    <input type="text" placeholder="your name">
+
+    <ul>
+        <li>Resses</li>
+        <li>Brownies</li>
+        <li>Oreos</li>
+    </ul>
+
+
     <script>
+        //Exercise 1 - css method
         //select all divs and give the purple background
         $("div").css("background", "purple");
         //select div class "highlight" and make 200px wide
@@ -32,6 +47,15 @@
         $("#third").css("border", "4px dotted orange");
         //* select the first div only and change font color to pink
         $("div:first-of-type").css("color", "pink");
+
+        //Exercise 2 - jQuery method
+        // val() - get the value or set a value of an input or dropdown
+        // text() - get the text or change the text of elements
+        // attr() - get the attribute of an element
+        // html() - add or edit entire html elements
+        // addClass()
+        // removeClass()
+        // toggleClass() - switch classes
     </script>
 
 </body>
