@@ -1,10 +1,14 @@
 var express = require("express");
 var app = express();
+var bodyParser = require("body-parser");
 
+app.use(bodyParser.urlencoded({ extended: true }));
 // tell the express app to use the files of the public directory
 app.use(express.static("public"));
 //tell express to use ejs so .ejs is not needed in the routes
 app.set("view engine", "ejs")
+
+var friends = ["donna", "Candi", "Latisha", "Andrea"];
 
 // root route
 app.get("/", function(req, res) {
@@ -27,16 +31,16 @@ app.get("/posts", function(req, res) {
     res.render("posts", { posts: posts });
 });
 
-app.get("/friends", function(req, res) {
-    var friends = ["donna", "Candi", "Latisha", "Andrea"];
-    res.render("friends", { friends: friends });
-});
 
 app.post("/addfriend", function(req, res) {
-    res.send("add a friend here");
+    var newFriend = req.body.newfriend;
+    friends.push(newFriend);
+    res.redirect("/friends");
 });
 
-
+app.get("/friends", function(req, res) {
+    res.render("friends", { friends: friends });
+});
 
 app.listen(3000, function() {
     console.log("running server on port 3000");
