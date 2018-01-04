@@ -1,11 +1,16 @@
-<h1>You fell in love with :
-    <%= thingVar %>
-</h1>
+<% include partials/header %>
 
-<% if(thingVar === "Ken"){ %>
-    <p>You Love the Best Man EVER!!!!</p>
-<% } else { %>
-    <p>You love a sap</p>
-<% } %>
+    <link rel="stylesheet" href="app.css">
+    <h1>You fell in love with :
+        <%= thingVar %>
+    </h1>
 
-<p>P.S. this is the love.ejs file!</p>
+    <% if(thingVar === "Ken"){ %>
+        <p>You Love the Best Man EVER!!!!</p>
+        <% } else { %>
+            <p>You love a sap</p>
+            <% } %>
+
+                <p>P.S. this is the love.ejs file!</p>
+
+                <% include partials/footer %>
