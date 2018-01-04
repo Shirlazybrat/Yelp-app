@@ -27,6 +27,15 @@ app.get("/posts", function(req, res) {
     res.render("posts", { posts: posts });
 });
 
+app.get("/friends", function(req, res) {
+    var friends = ["donna", "Candi", "Latisha", "Andrea"];
+    res.render("friends", { friends: friends });
+});
+
+app.post("/addfriend", function(req, res) {
+    res.send("add a friend here");
+});
+
 
 
 app.listen(3000, function() {
