@@ -1,14 +1,17 @@
 var express = require("express");
 var request = require("request");
-app = express();
+var app = express();
+
+// require ejs template
+app.set("view engine", "ejs");
 
 
 app.get("/result", function(req, res) {
     // res.send("it works");
     request("http://www.omdbapi.com/?s=atlanta&apikey=thewdb", function(error, response, body) {
         if (!error && response.statusCode == 200) {
-            var results = JSON.parse(body)
-            res.send(results["Search"][0]["Title"]);
+            var data = JSON.parse(body)
+            res.render("results", { data: data });
         }
     });
 });
