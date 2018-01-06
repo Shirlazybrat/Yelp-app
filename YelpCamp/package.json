@@ -1,15 +1,16 @@
 {
-  "name": "expresspractice",
+  "name": "yelpcamp",
   "version": "1.0.0",
-  "description": "Simple app to practice using express",
+  "description": "Yelp mock application",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shirlette Chambers",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.2",
-    "nodemon": "^1.14.7"
+    "nodemon": "^1.14.8",
+    "require": "^2.4.20"
   }
 }
